@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { PropsWithChildren } from "react";
+import { DisplayCard } from "@/components/DisplayCard";
 
 interface CodeProps extends PropsWithChildren {
   className?: string;
@@ -20,9 +21,10 @@ function Code({ children, className }: CodeProps) {
 
 export default function Home() {
   return (
-    <div className="max-w-4xl mx-auto p-4">
-      <div className="border rounded-lg px-6 py-8 mt-10 bg-white shadow-sm">
-        <h1 className="text-3xl font-bold mb-6">Take Home Assignment</h1>
+    <div className="min-h-screen bg-white transition-colors duration-200">
+      <div className="max-w-4xl mx-auto p-4">
+        <div className="border border-gray-200 rounded-lg px-6 py-8 mt-10 bg-white shadow-sm">
+        <h1 className="text-3xl font-bold mb-6">Take Home Assignment 😀</h1>
 
         <div className="space-y-6">
           <div>
@@ -143,31 +145,66 @@ export default function Home() {
       </div>
 
       {/* Demo Section Placeholder */}
-      <div className="border rounded-lg px-6 py-8 mt-8 bg-gray-50">
-        <h2 className="text-2xl font-bold mb-4">Your Component Demo</h2>
-        <p className="text-gray-600 mb-6">
-          Replace this section with examples of your DisplayCard component:
-        </p>
+        <div className="border border-gray-200 rounded-lg px-6 py-8 mt-8 bg-gray-50">
+        <h2 className="text-2xl font-bold mb-4">DisplayCard demo</h2>
 
         <div className="space-y-6">
           <div>
             <h3 className="text-lg font-medium mb-3">Default Variant</h3>
-            <div className="bg-white p-4 border rounded border-dashed">
-              <p className="text-gray-500 text-center">
-                Your default DisplayCard components go here
-              </p>
+            <div className="bg-white p-4 border border-gray-300 rounded border-dashed grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              <DisplayCard
+                title="Zero-G Racing"
+                description="Experience the ultimate thrill of high-speed racing in zero gravity environments. Navigate through asteroid fields and space stations in this heart-pounding competition."
+                imageUrl="https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=500&h=300&fit=crop"
+              />
+              <DisplayCard
+                title="Plasma Ball League"
+                description="Master the art of plasma manipulation in this fast-paced team sport. Control energy orbs through magnetic fields to score goals in zero gravity arenas."
+                imageUrl="https://images.unsplash.com/photo-1614728263952-84ea256f9679?w=500&h=300&fit=crop"
+              />
+              <DisplayCard
+                title="Orbital Combat Arena"
+                description="Engage in tactical combat sports using advanced exosuits and energy weapons. Battle opponents in rotating space stations with shifting gravity zones."
+                imageUrl="https://images.unsplash.com/photo-1518066000714-58c45f1a2c0a?w=500&h=300&fit=crop"
+              />
+              <DisplayCard
+                title="Nebula Surfing"
+                description="Ride the cosmic waves of stellar winds through colorful nebulae. This extreme sport combines surfing techniques with advanced propulsion technology."
+                imageUrl="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=500&h=300&fit=crop"
+              />
+              <DisplayCard
+                title="Moon Base Olympics"
+                description="Compete in traditional Olympic events adapted for lunar gravity. High jump records are shattered in this prestigious interplanetary sporting competition."
+                imageUrl="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?w=500&h=300&fit=crop"
+              />
             </div>
           </div>
 
           <div>
             <h3 className="text-lg font-medium mb-3">Featured Variant</h3>
-            <div className="bg-white p-4 border rounded border-dashed">
-              <p className="text-gray-500 text-center">
-                Your featured DisplayCard components go here
-              </p>
+            <div className="bg-white p-4 border border-gray-300 rounded border-dashed grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-8 mb-8 ml-4">
+              <DisplayCard
+                title="Black Hole Diving Championship"
+                description="The ultimate test of courage and precision. Navigate gravitational anomalies and time dilation effects as you dive toward the event horizon. Only the most elite pilots with quantum-resistant exosuits qualify for this legendary competition."
+                imageUrl="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=500&h=400&fit=crop"
+                featured={true}
+              />
+              <DisplayCard
+                title="Supernova Shockwave Surfing"
+                description="Ride the explosive energy waves of dying stars across multiple light-years. This death-defying sport requires mastery of exotic matter shields and temporal navigation. Reserved for the galaxy's most fearless adrenaline junkies."
+                imageUrl="https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=500&h=400&fit=crop"
+                featured={true}
+              />
+              <DisplayCard
+                title="Quantum Entanglement Relay Race"
+                description="Compete across parallel dimensions simultaneously in this mind-bending team sport. Master quantum tunneling techniques and dimensional rifts to outmaneuver opponents existing in multiple realities at once."
+                imageUrl="https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?w=500&h=400&fit=crop"
+                featured={true}
+              />
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
