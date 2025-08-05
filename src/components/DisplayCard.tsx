@@ -1,5 +1,3 @@
-'use client';
-
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -20,13 +18,6 @@ export function DisplayCard({ title, description, imageUrl, featured = false }: 
       tabIndex={0}
       role="button"
       aria-label={`${featured ? 'Featured card: ' : ''}${title}. ${description}`}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          // You can add click handler here if needed
-          console.log(`Card activated: ${title}`);
-        }
-      }}
     >
       <div className={cn(
         "bg-black h-full",
